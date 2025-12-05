@@ -1,39 +1,45 @@
-
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的 Fox-Text 转换器</title>
-    <link rel="stylesheet" href="style.css">
+    <title>狐狸文本生成器</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦊</text></svg>">
 </head>
 <body>
-    <header>
-        <h1>Fox-Text 转换工具</h1>
-        <label class="switch">
-            <input type="checkbox" id="darkModeToggle">
-            <span class="slider round"></span>
-        </label>
-    </header>
-
-    <main>
-        <div class="input-container">
-            <h2>输入文本</h2>
-            <textarea id="inputText" placeholder="在此输入你想要转换的文本..."></textarea>
-            <button id="convertButton">转换为 Fox-Text</button>
+    <div class="container">
+        <h1>狐狸文本生成器</h1>
+        <div class="controls">
+            <div class="control-group">
+                <label for="text-type">文本类型：</label>
+                <select id="text-type">
+                    <option value="proverb">狐狸谚语</option>
+                    <option value="joke">狐狸笑话</option>
+                    <option value="poem">狐狸诗歌</option>
+                    <option value="story">狐狸小故事</option>
+                    <option value="random">随机混合</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="text-count">生成数量：</label>
+                <input type="range" id="text-count" min="1" max="10" value="3">
+                <span id="text-count-value">3</span>
+            </div>
+            <div class="control-group">
+                <label for="dark-mode">夜间模式：</label>
+                <input type="checkbox" id="dark-mode">
+            </div>
+            <button id="generate-btn">生成文本</button>
+            <button id="copy-btn">复制结果</button>
         </div>
-
-        <div class="output-container">
-            <h2>输出 Fox-Text</h2>
-            <textarea id="outputText" readonly placeholder="转换结果将显示在这里..."></textarea>
-            <button id="copyButton">复制</button>
+        <div class="result-container">
+            <div id="result"></div>
         </div>
-    </main>
-
-    <footer>
-        <p>基于 Pig-Text 灵感制作的 Fox-Text</p>
-    </footer>
-
+        <div class="footer">
+            <p>狐狸文本生成器 | <a href="https://github.com/yourusername/fox-text" target="_blank">GitHub</a></p>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
