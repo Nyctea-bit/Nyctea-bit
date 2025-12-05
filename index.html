@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的 Fox-Text 转换器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Fox-Text 转换工具</h1>
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider round"></span>
+        </label>
+    </header>
+
+    <main>
+        <div class="input-container">
+            <h2>输入文本</h2>
+            <textarea id="inputText" placeholder="在此输入你想要转换的文本..."></textarea>
+            <button id="convertButton">转换为 Fox-Text</button>
+        </div>
+
+        <div class="output-container">
+            <h2>输出 Fox-Text</h2>
+            <textarea id="outputText" readonly placeholder="转换结果将显示在这里..."></textarea>
+            <button id="copyButton">复制</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>基于 Pig-Text 灵感制作的 Fox-Text</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
