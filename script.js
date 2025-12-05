@@ -119,6 +119,3 @@ document.addEventListener('DOMContentLoaded', function() {
         window.history.replaceState({}, '', newUrl);
     }
 });
-    }
-
-});
